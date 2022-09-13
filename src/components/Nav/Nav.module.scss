@@ -1,0 +1,28 @@
+.lista{
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(90deg);
+    .item{
+        .Link{
+            color: white;
+            list-style: none;
+            text-decoration: none;
+            font-weight: 400;
+            .parentesis{
+                font-family: 'Poppins', sans-serif;
+                color: #FF2B51;
+                font-size: 20px;
+            }
+        }
+        margin-right: 25px;
+        list-style: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20.5px;
+        font-weight: 400;
+        border-bottom: 1px solid black ;
+        &:hover{
+            border-bottom: 1px solid #FF2B51 ;
+            background-color: rgb(14, 14, 14);
+        }
+    }
+}

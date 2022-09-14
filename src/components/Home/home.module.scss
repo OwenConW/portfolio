@@ -20,7 +20,6 @@
             justify-content: flex-end;
             width: 100%;
             margin-left: 20px;
-            align-items: baseline;
             margin-bottom: 0px;
             text-shadow: 0 0 8px #C8C8C8;
 
@@ -30,6 +29,7 @@
                 font-size: 120px;     
             }
             b{
+                margin-top: 20px;
                 font-family: 'Poppins', sans-serif;
                 color: #FF2B51;
                 font-size: 100px;
@@ -58,10 +58,10 @@
                     margin-top: 0px;
                     height: 100%;
                     width: 100%;
-                    h1{
-                        display: inline;
-                        width: 100%;
-                        color: #FF2B51;
+                    img{
+                        width: 200px;
+                        height: 200px;
+                        margin-top: 50px;
                     }
                 }
             }
@@ -72,7 +72,7 @@
         height: 70%;
         width: 100%;
         .about{
-            margin-top: 70px;
+            margin-top: 120px;
             display: flex;
             flex-direction: column;
             width: 50%;
@@ -85,14 +85,14 @@
                 margin-left: 25px;
                 font-family: 'Poppins', sans-serif;
                 font-weight: 200;
-                font-size: 60px;
+                font-size: 50px;
                 text-shadow: 0 0 2px #C8C8C8;
             }
             .b1{
                 width: 0%;
                 animation-name: typing;
                 animation-delay: 0s;
-                animation-duration: 4s;
+                animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
                 .inicio{
@@ -104,7 +104,7 @@
             .b2{
                 width: 0%;
                 animation-name: typing;
-                animation-delay: 1s;
+                animation-delay: 1.5s;
                 animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
@@ -113,7 +113,7 @@
             .b3{
                 width: 0%;
                 animation-name: typing;
-                animation-delay: 2s;
+                animation-delay: 3s;
                 animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
@@ -122,7 +122,7 @@
             .b4{
                 width: 0%;
                 animation-name: typing;
-                animation-delay: 3s;
+                animation-delay: 5s;
                 animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
@@ -131,7 +131,7 @@
             .b5{
                 width: 0%;
                 animation-name: typing;
-                animation-delay: 4s;
+                animation-delay: 7s;
                 animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
@@ -139,7 +139,7 @@
             .b6{
                 width: 0%;
                 animation-name: typing;
-                animation-delay: 5s;
+                animation-delay: 9s;
                 animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
@@ -152,7 +152,7 @@
             .b7{
                 width: 0%;
                 animation-name: typing;
-                animation-delay: 6s;
+                animation-delay: 11s;
                 animation-duration: 3s;
                 animation-iteration-count: inherit;
                 animation-fill-mode: forwards;
@@ -176,12 +176,6 @@
                 box-shadow: 0px -1px 60px 9px rgba(255,43,81,1);
                 -webkit-box-shadow: 0px -1px 60px 9px rgba(255,43,81,1);
                 -moz-box-shadow: 0px -1px 60px 9px rgba(255,43,81,1);
-               
-                // position: absolute;
-                // width: 570px;
-                // height: 570px;
-                // top: 65px;
-                // left: 35%
             }
             .Circulo2{
                 position: absolute;
@@ -206,8 +200,605 @@
    
 }
 
+@media screen and (max-width: 1200px){
+    .contenedorPadre{
+        margin-top: 0px;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        .contenedorHeader{
+            margin-top: 0px;
+            width: 100%;
+            height: 30%;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            .contenedorTitle{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-left: 20px;
+                margin-bottom: 0px;
+                text-shadow: 0 0 8px #C8C8C8;
+    
+                .o{
+                    font-family: 'Poppins', sans-serif;
+                    color: #FF2B51;
+                    font-size: 75px;     
+                }
+                b{
+                    margin-top: 7px;
+                    font-family: 'Poppins', sans-serif;
+                    color: #FF2B51;
+                    font-size: 75px;
+                    text-shadow: 0 0 5px #ff0505;
+    
+                }
+                .title{
+                    margin-bottom: 0px;
+                    margin-left: 25px;
+                    font-weight: 500;
+                    display: inline;
+                    margin-top: 0px;
+                    color: white;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 80px;
+                }
+                .MyName{
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 25%;
+                    font-size: 20px;
+                    margin-right: 54px;
+                    text-align: center;
+                    text-shadow: none;
+                    div{
+                        margin-top: 0px;
+                        height: 100%;
+                        width: 100%;
+                        img{
+                            width: 200px;
+                            height: 200px;
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .contenedorImageNav{
+            display: flex;
+            height: 70%;
+            width: 100%;
+            .about{
+                margin-top: 120px;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                height: 100%;
+                b{
+                    width: 100%;
+                    color: white;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin-left: 25px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 200;
+                    font-size: 33px;
+                    text-shadow: 0 0 2px #C8C8C8;
+                }
+                .b1{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 0s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    .inicio{
+                        color: #FF2B51;
+                        text-shadow: none;
+                    }
+                }
+                
+                .b2{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 1.5s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b3{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 3s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b4{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 5s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b5{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 7s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                .b6{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 9s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    .inicio{
+                        color: #ffffff;
+                        text-shadow: 0 0 5px #C8C8C8;
+                        margin-left: 0px;
+                    }
+                }
+                .b7{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 11s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .visual{
+                display: flex;
+                width: 60%;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                .sombraCirculo{
+                    width: 400px;
+                    height: 400px;
+                }
+                .Circulo{
+                    align-self: center;
+                    width: 370px;
+                    height: 370px;
+                    border-radius: 60%;
+                    box-shadow: 0px -1px 60px 9px rgba(255,43,81,1);
+                    -webkit-box-shadow: 0px -1px 60px 9px rgba(255,43,81,1);
+                    -moz-box-shadow: 0px -1px 60px 9px rgba(255,43,81,1);
+                }
+                .Circulo2{
+                    position: absolute;
+                    width: 370px;
+                    height: 370px;
+                    border-radius: 60%;
+                    box-shadow: 0px -1px 90px 9px rgba(255,43,81,1) inset;
+                    -webkit-box-shadow: 0px -1px 90px 9px rgba(255,43,81,1) inset;
+                    -moz-box-shadow: 0px -1px 90px 9px rgba(255,43,81,1) inset;
+                }
+                .hacker{
+                    position: absolute;
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+            .contenedorLista{
+                width: 5%;
+                
+            }
+        }
+       
+    }
+}
 
 
+@media screen and (max-width: 688px){
+    .contenedorPadre{
+        margin-top: 0px;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        .contenedorHeader{
+            margin-top: 0px;
+            width: 100%;
+            height: 25%;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            .contenedorTitle{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-left: 20px;
+                margin-bottom: 0px;
+                text-shadow: 0 0 8px #C8C8C8;
+    
+                .o{
+                    font-family: 'Poppins', sans-serif;
+                    color: #FF2B51;
+                    font-size: 60px;     
+                }
+                b{
+                    margin-top: 7px;
+                    font-family: 'Poppins', sans-serif;
+                    color: #FF2B51;
+                    font-size: 60px;
+                    text-shadow: 0 0 5px #ff0505;
+    
+                }
+                .title{
+                    margin-bottom: 0px;
+                    margin-left: 25px;
+                    font-weight: 500;
+                    display: inline;
+                    margin-top: 0px;
+                    color: white;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 50px;
+                }
+                .MyName{
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 25%;
+                    font-size: 20px;
+                    margin-right: 54px;
+                    text-align: center;
+                    text-shadow: none;
+                    div{
+                        margin-top: 0px;
+                        height: 100%;
+                        width: 100%;
+                        img{
+                            width: 160px;
+                            height: 160px;
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .contenedorImageNav{
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+            width: 100%;
+            .about{
+                margin-top: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                b{
+                    width: 100%;
+                    color: white;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin-left: 25px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 200;
+                    font-size: 33px;
+                    text-shadow: 0 0 2px #C8C8C8;
+                }
+                .b1{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 0s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    .inicio{
+                        color: #FF2B51;
+                        text-shadow: none;
+                    }
+                }
+                
+                .b2{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 1.5s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b3{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 3s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b4{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 5s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b5{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 7s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                .b6{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 9s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    .inicio{
+                        color: #ffffff;
+                        text-shadow: 0 0 5px #C8C8C8;
+                        margin-left: 0px;
+                    }
+                }
+                .b7{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 11s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .visual{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                margin-top: 40px;
+                .sombraCirculo{
+                    width: 400px;
+                    height: 400px;
+                }
+                .Circulo{
+                    align-self: center;
+                    width: 370px;
+                    height: 370px;
+                    border-radius: 60%;
+                    box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
+                    -webkit-box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
+                    -moz-box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
+                }
+                .Circulo2{
+                    position: absolute;
+                    width: 370px;
+                    height: 370px;
+                    border-radius: 60%;
+                    box-shadow: 0px -1px 90px 9px rgba(255,43,81,1) inset;
+                    -webkit-box-shadow: 0px -1px 90px 9px rgba(255,43,81,1) inset;
+                    -moz-box-shadow: 0px -1px 90px 9px rgba(255,43,81,1) inset;
+                }
+                .hacker{
+                    position: absolute;
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+            .contenedorLista{
+                width: 5%;
+                
+            }
+        }
+       
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedorPadre{
+        margin-top: 0px;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        .contenedorHeader{
+            margin-top: 0px;
+            width: 100%;
+            height: 20%;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            .contenedorTitle{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-left: 20px;
+                margin-bottom: 0px;
+                text-shadow: 0 0 8px #C8C8C8;
+    
+                .o{
+                    font-family: 'Poppins', sans-serif;
+                    color: #FF2B51;
+                    font-size: 36px;    
+                }
+                b{
+                    margin-top: 7px;
+                    font-family: 'Poppins', sans-serif;
+                    color: #FF2B51;
+                    font-size: 36px;
+                    text-shadow: 0 0 5px #ff0505;
+    
+                }
+                .title{
+                    margin-bottom: 0px;
+                    margin-left: 25px;
+                    font-weight: 500;
+                    display: inline;
+                    margin-top: 0px;
+                    color: white;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 36px;
+                }
+                .MyName{
+                   display: none;
+                }
+            }
+        }
+        .contenedorImageNav{
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+            width: 100%;
+            .about{
+                margin-top: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                b{
+                    width: 100%;
+                    color: white;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin-left: 5px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 200;
+                    font-size: 23px;
+                    text-shadow: 0 0 2px #C8C8C8;
+                }
+                .b1{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 0s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    .inicio{
+                        color: #FF2B51;
+                        text-shadow: none;
+                    }
+                }
+                
+                .b2{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 1.5s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b3{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 3s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b4{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 5s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                
+                .b5{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 7s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+                .b6{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 9s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    .inicio{
+                        color: #ffffff;
+                        text-shadow: 0 0 5px #C8C8C8;
+                        margin-left: 0px;
+                    }
+                }
+                .b7{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 11s;
+                    animation-duration: 3s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .visual{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                margin-top: 40px;
+                .Circulo{
+                    align-self: center;
+                    width: 270px;
+                    height: 270px;
+                    border-radius: 60%;
+                    box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
+                    -webkit-box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
+                    -moz-box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
+                }
+                .Circulo2{
+                    position: absolute;
+                    width: 270px;
+                    height: 270px;
+                    border-radius: 60%;
+                    box-shadow: 0px -1px 46px 9px rgba(255,43,81,1) inset;
+                    -webkit-box-shadow: 0px -1px 46px 9px rgba(255,43,81,1) inset;
+                    -moz-box-shadow: 0px -1px 46px 9px rgba(255,43,81,1) inset;
+                }
+                .hacker{
+                    position: absolute;
+                    width: 210px;
+                    height: 210px;
+                }
+            }
+            .contenedorLista{
+                width: 5%;
+            }
+        }
+       
+    }
+}
 
 @keyframes typing {
     from{width: 0%}

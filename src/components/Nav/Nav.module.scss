@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     transform: rotate(90deg);
+    margin-right: 40px;
     .item{
         .Link{
             color: white;
@@ -14,10 +15,10 @@
                 font-size: 20px;
             }
         }
-        margin-right: 25px;
+        margin-right: 20px;
         list-style: none;
         font-family: 'Poppins', sans-serif;
-        font-size: 20.5px;
+        font-size: 20px;
         font-weight: 700;
         border-bottom: 1px solid black ;
         &:hover{
@@ -36,10 +37,10 @@
                 font-size: 20px;
             }
         }
-        margin-right: 25px;
+        margin-right: 20px;
         list-style: none;
         font-family: 'Poppins', sans-serif;
-        font-size: 20.5px;
+        font-size: 20px;
         font-weight: 700;
         border-bottom: 1px solid black ;
         border-bottom: 1px solid #FF2B51 ;

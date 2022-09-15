@@ -71,7 +71,7 @@ const Home = () => {
                 <b className={s.b4}>tecnologias, así como a su vez </b>
                 <b className={s.b5}> mejorar en esta area cada día</b>
                 <b className={s.b6}> y continuar aprendiendo Ingles.</b>
-                <br></br><br></br>
+                <b> </b>
                 <b className={s.b7}> Team Front y Back por igual ;)</b>
               </>
             )}

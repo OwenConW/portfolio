@@ -4,9 +4,12 @@ import { useDispatch } from "react-redux"
 import { changeSelectedWindow} from "../../redux/actions/actions"
 import Nav from "../Nav/Nav"
 import s from "./Proyects.module.scss"   
-import { motion, useScroll } from "framer-motion";
+import { motion, useTime } from "framer-motion";
 import punto from "./assets/punto.png"
 import scroll from "./assets/scroll.png"
+import click from "./assets/hacer-clic.png"
+import gitHub from "./assets/github.png"
+import deploy from "./assets/deploy.png"
 //-
 import login from "./assets/login.png"
 import createAccount from "./assets/createAccount.png"
@@ -29,9 +32,22 @@ import aboutW from "./assets/aboutW.png"
 import noPokemonW from "./assets/noPokemonW.png"
 
 export default function Proyects() {
-  const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
-
+  const cardVariants = {
+    offscreenL: {
+      x: -500
+    },
+    offscreenR: {
+      x: 500
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8
+      }
+    }
+  };
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -58,10 +74,16 @@ export default function Proyects() {
             Galeria de proyectos
           </motion.h1>
           </div>
-          <div>
-            <img src={punto} alt="punto" className={s.puntoIcon}/>
-            <img src={scroll} alt="scroll"/>
-          </div>
+          <motion.div
+          animate={{ y: [-170, 0], x: [0, 0], opacity: [0, 1]}}
+          transition={{delay: 1}}>
+            <motion.img src={punto} alt="punto" className={s.puntoIcon}
+            animate={{y:[0, 0, 0, 8, 0, 0, 8, 0,  0, 8, 0,  0, 8, 0, 0]}}
+            transition={{repeat: Infinity, duration: 7}}/>
+            <motion.img src={scroll} alt="scroll"
+            animate={{y:[0, 0, 0, 8, 0, 0, 8, 0,  0, 8, 0,  0, 8, 0, 0]}}
+            transition={{repeat: Infinity, duration: 7}}/>
+          </motion.div>
         </div>
         <div className={s.contenedorProyectsNav}>
           <div className={s.contenedorProyects}>
@@ -70,75 +92,108 @@ export default function Proyects() {
               id="carouselExampleControls"
               class="carousel slide"
               data-ride="carousel"
-              initial={{ y: 4000, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8 }}
-            >
-              <div class="carousel-inner">
+              initial={{ x: 4000, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.8 }}>
+              <div className="carousel-inner">
                 <div className="carousel-item active">
                 <div className={s.ImagenesProyecto}>
-                  <h1 id="firstJ">Job Hub App</h1>
-                  <img src={login} alt="login" className={s.itemCarousel}/>
+                  <h1 id="firstJ" className={s.tituloProyecto}>Job Hub App</h1>
+                  <motion.img src={login} alt="login" className={s.itemCarousel}
+                  variants={cardVariants}
+                  initial="offscreenR"
+                  whileInView="onscreen"/>
                   <motion.img src={createAccount} alt="createAccount" className={s.itemCarousel}
-                    initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}
-                  />
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
                   <motion.img src={home} alt="home" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
                   <motion.img src={catalogo} alt="catalogo" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
                   <motion.img src={mapa} alt="mapa" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
                   <motion.img src={details} alt="details" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
                   <motion.img src={chat} alt="chat" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
                   <motion.img src={admin} alt="admin" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
                   <motion.img src={faq} alt="faq" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
                   <motion.img src={panelConfig} alt="panelConfig" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
                   <motion.img src={profileP} alt="profileP" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
                   <motion.img src={soporte} alt="soporte" className={s.itemCarousel}
-                  initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ opacity: 1}}/>
-                  <h1><a href="https://github.com/OwenConW/JobHubApp">Repositorio</a></h1>
-                  <h1><a href="https://jobhub.vercel.app/">Deploy</a></h1>
-                  <h1 className={s.comeBack}><a href="#firstJ">Regresar</a></h1>
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
+                  <h1><img src={gitHub} alt="github"/><a href="https://github.com/OwenConW/JobHubApp">Repositorio</a></h1>
+                  <h1><img src={deploy} alt="deploy"/><a href="https://jobhub.vercel.app/">Deploy</a></h1>
+                  <h1 className={s.comeBack}><a href="#firstJ">Regresar</a><img src={click} alt="clickback"/></h1>
                 </div>
                 </div>
                 <div className="carousel-item">
                 <div className={s.ImagenesProyecto}>
-                <h1 id="firstW">Wiki Pokemon</h1>
-                <img src={landingW} alt="landingW" className={s.itemCarousel}/>
-                <img src={homeW} alt="homeW" className={s.itemCarousel}/>
-                <img src={searchW} alt="searchW" className={s.itemCarousel}/>
-                <img src={formW} alt="formW" className={s.itemCarousel}/>
-                <img src={aboutW} alt="aboutW" className={s.itemCarousel}/>
-                <img src={noPokemonW} alt="noPokemonW" className={s.itemCarousel}/>
-                <h1><a href="https://github.com/OwenConW/WikiPokemon">Repositorio</a></h1>
-                <h1><a href="https://pokemon-wikit-by-owen.vercel.app/">Deploy</a></h1>
-                  <h1 className={s.comeBack}><a href="#firstW">Regresar</a></h1>
+                <h1 id="firstW" className={s.tituloProyecto}>Wiki Pokemon</h1>
+                <motion.img src={landingW} alt="landingW" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
+                <motion.img src={homeW} alt="homeW" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
+                <motion.img src={searchW} alt="searchW" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
+                <motion.img src={formW} alt="formW" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
+                <motion.img src={aboutW} alt="aboutW" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
+                <motion.img src={noPokemonW} alt="noPokemonW" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenL"
+                whileInView="onscreen"/>
+                <h1><img src={gitHub} alt="github"/><a href="https://github.com/OwenConW/WikiPokemon">Repositorio</a></h1>
+                <h1><img src={deploy} alt="deploy"/><a href="https://pokemon-wikit-by-owen.vercel.app/">Deploy</a></h1>
+                  <h1 className={s.comeBack}><a href="#firstW">Regresar</a><img src={click} alt="clickback"/></h1>
             </div>
                 </div>
                 <div className="carousel-item">
                 <div className={s.ImagenesProyecto}>
-                <h1 id="firstC">App Clima </h1>
-                <img src={soporte} alt="soporte" className={s.itemCarousel}/>
-                <h1><a href="https://github.com/OwenConW/App_clima">Repositorio</a></h1>
-                <h1><a href="https://app-clima-lime.vercel.app/">Deploy</a></h1>
-                  <h1 className={s.comeBack}><a href="#firstC">Regresar</a></h1>
+                <h1 id="firstC" className={s.tituloProyecto}>App Clima </h1>
+                <motion.img src={soporte} alt="soporte" className={s.itemCarousel}
+                variants={cardVariants}
+                initial="offscreenR"
+                whileInView="onscreen"/>
+                <h1><img src={gitHub} alt="github"/><a href="https://github.com/OwenConW/App_clima">Repositorio</a></h1>
+                <h1><img src={deploy} alt="deploy"/><a href="https://app-clima-lime.vercel.app/">Deploy</a></h1>
+                  <h1 className={s.comeBack}><a href="#firstC">Regresar</a><img src={click} alt="clickback"/></h1>
                 </div>
                 </div>
               </div>
@@ -149,10 +204,10 @@ export default function Proyects() {
                 data-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon"
+                  className="carousel-control-prev-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only">Previous</span>
+                <span className="sr-only">Previous</span>
               </a>
               <a
                 className={s.carousel_control_next}
@@ -161,10 +216,10 @@ export default function Proyects() {
                 data-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon"
+                  className="carousel-control-next-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only">Next</span>
+                <span className="sr-only">Next</span>
               </a>
             </motion.div>
             </div>

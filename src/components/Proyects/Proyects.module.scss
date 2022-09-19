@@ -1,0 +1,144 @@
+.contenedorPadre{
+    margin-top: 0px;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    .contenedorTitle{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 0px;
+        text-shadow: 0 0 8px #C8C8C8;
+        div{
+          b{
+              margin-top: px;
+              font-family: 'Poppins', sans-serif;
+              color: #FF2B51;
+              font-size: 90px;
+              text-shadow: 0 0 5px #ff0505;
+  
+          }
+          .title{
+              margin-bottom: 0px;
+              margin-left: 25px;
+              font-weight: 500;
+              display: inline;
+              margin-top: 0px;
+              color: white;
+              font-family: 'Poppins', sans-serif;
+              font-size: 90px;
+          }
+        }
+        div{
+          .puntoIcon{
+            margin-top: 10px;
+            width: 90px;
+            height: 90px;
+          }
+          img{
+            margin-top: 10px;
+            width: 150px;
+            height: 150px;
+          }
+        }
+    }
+    .contenedorProyectsNav{
+        display: flex;
+        width: 100%;
+        .contenedorProyects{
+            width: 97%;
+            height: 88vh;
+            display: flex;
+            justify-content: center;
+            overflow: auto;
+            scroll-behavior: smooth;
+            &{
+              scrollbar-width: auto;
+              scrollbar-color: #4d4d4d00 #7a7a7a00;
+              border: 0;
+              margin: 0;
+              padding: 0;
+            }
+          
+            &::-webkit-scrollbar {
+              width: 15px;
+            }
+          
+            &::-webkit-scrollbar-track {
+              background: #00000000;
+              border-radius: 10px;
+            }
+          
+            &::-webkit-scrollbar-thumb {
+              background-color: #000000;
+              border-radius: 5px;
+              border: 0px none #000000;
+            }
+          
+            .contenedorCarousel{
+              display: flex;
+              .ImagenesProyecto{
+                scroll-behavior: smooth;
+                display: block;
+                overflow: auto;
+                text-align: center;
+                flex-direction: column;
+                scroll-behavior: smooth;
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                text-shadow: 0 0 8px #C8C8C8;
+                .itemCarousel{
+                  display: block;
+                  margin-bottom: 42px;
+                  width: 1200px;
+                  height: 700px;
+                }
+                h1 a{
+                  color: white;
+                  text-shadow: 0 0 8px #C8C8C8;
+                  text-decoration: none;
+                }
+                .comeBack{
+                 
+                  margin-bottom: 80px;
+                }
+              }
+            }         
+        }
+
+        .contenedorNav{
+            width: 3%;
+        }
+    }
+}
+.carousel_control_prev{
+  color: black;
+  display: flex;
+  position: absolute;
+  top: 380px;
+  left: -50px;
+  background-color: #ff0505;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+.carousel_control_next{
+  color: black;
+  display: flex;
+  position: absolute;
+  top: 380px;
+  left: 1210px;
+  background-color: #ff0505;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+

@@ -61,7 +61,7 @@ const Nav = () =>  {
                         transition={{delay: 0.5}}  
                         onClick={handleClick}><Link id={"home"} to="/" className={s.Link}>.SOBRE_MI<b className={s.parentesis}>()</b></Link>
                         </motion.li>
-                        <motion.li className={selected === "projects" ? s.selected : s.item} 
+                        <motion.li className={selected === "proyects" ? s.selected : s.item} 
                         inital={{x: 100}}  
                         animate={{ y: [-700, 0], x: [0, 0] }} 
                         transition={{delay: 1}}  

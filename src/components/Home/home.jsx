@@ -24,14 +24,12 @@ const Home = () => {
         <div className={s.contenedorHeader}>
           <div className={s.contenedorTitle}>
             <motion.b
-              initial={{ x: -4000, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              animate={{ x: [-1800, 0], y: [0, 0], opacity: [0, 1] }}
+              transition={{delay: 0.5}}
             >{`>`}</motion.b>
             <motion.h1
-              initial={{ x: -4000, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              animate={{ x: [-1800, 0], y: [0, 0], opacity: [0, 1] }}
+              transition={{delay: 0.5}}
               className={s.title}
             >
               Bienvenid<b className={s.o}>@</b> al portfolio de{" "}

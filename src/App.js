@@ -3,6 +3,7 @@ import "./global.css"
 import { Route, Routes} from "react-router-dom"
 import Technologies from "./components/Technologies/Technologies"
 import Proyects from "./components/Proyects/Proyects"
+import Contactme from "./components/Contactme/Contactme"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route exact path="/" element={<Home/>}/>
       <Route exact path= "/tecnologies" element={<Technologies/>}/>
       <Route exact path= "/proyects" element={<Proyects/>}/>
+      <Route exact path= "/contactme" element={<Contactme/>}/> 
     </Routes>
     </>
   );

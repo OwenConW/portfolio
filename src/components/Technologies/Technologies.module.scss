@@ -15,7 +15,7 @@
         margin-bottom: 0px;
         text-shadow: 0 0 8px #C8C8C8;
         b{
-            margin-top: 20px;
+            margin-top: 5px;
             font-family: 'Poppins', sans-serif;
             color: #FF2B51;
             font-size: 100px;
@@ -70,6 +70,7 @@
                         -webkit-user-drag: none;
                         transition: 0.5s ease;
                         &:hover{
+                            cursor: grab;
                             transition: 0.5s ease;
                             transform: scale(1.3);
                         }

@@ -1,0 +1,87 @@
+.contenedorPadre{
+    margin-top: 0px;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contenedorTitle{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 0px;
+        text-shadow: 0 0 8px #C8C8C8;
+        div{
+            b{
+                margin-top: px;
+                font-family: 'Poppins', sans-serif;
+                color: #FF2B51;
+                font-size: 90px;
+                text-shadow: 0 0 5px #ff0505;
+    
+            }
+            .title{
+                margin-bottom: 0px;
+                margin-left: 25px;
+                font-weight: 500;
+                display: inline;
+                margin-top: 0px;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                font-size: 90px;
+      
+              }
+        }
+        div{
+            display: flex;
+            img{
+                margin-top: 30px;
+                margin-right: 40px;
+                width: 90px;
+                height: 90px;
+            }
+            svg{
+                margin-top: 30px;
+                margin-right: 40px; 
+                cursor: pointer;
+                path{
+                    transition: 0.5s ease;
+                }
+                &:hover{
+                    path{
+                        fill: #FF2B51
+                    }
+                } 
+            }
+        }
+    }
+    .contenedorNavMail{
+        display: flex;
+        height: 86vh;
+        width: 100%;
+        .form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 95%;
+            h1{
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                font-size: 50px;
+                text-shadow: 0 0 8px #C8C8C8;
+            }
+            div{
+                text-align: center;
+            }
+        }
+        .nav{
+            padding-top: 90px;
+            padding-left: 25px;
+           width:  5%;
+        }
+    }
+}   

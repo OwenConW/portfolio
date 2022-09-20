@@ -1,0 +1,150 @@
+form{
+    background-color: rgba(20, 20, 20, 0.329);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 60px;
+    padding: 70px;
+    div{
+        display: flex;
+        div{
+            div{
+                
+            }
+            input{
+                color: white;
+                background-color: rgba(0, 0, 0, 0.144);
+        
+                padding: 20px;
+                margin: 10px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 1px solid rgb(253, 253, 253);
+                font-family: 'Poppins', sans-serif;
+                text-shadow: 0 0 2px #C8C8C8;   
+                font-size: 20px;
+                &::placeholder{
+                        color: white;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 20px;
+                        text-shadow: 0 0 2px #C8C8C8;
+                }
+                &:focus{
+                    outline: none; 
+                    border-bottom: 1px solid #FF2B51;
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            p{
+                color: #FF2B51;
+                text-shadow: 0 0 2px red;
+                margin-left: 20px;
+                display: inline;
+            }
+
+        }
+        
+    }
+    .subject{
+        display: flex;
+        flex-direction: column;
+        input{
+            color: white;
+            background-color: rgba(0, 0, 0, 0.144);
+    
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            border-bottom: 1px solid rgb(253, 253, 253);
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 0 2px #C8C8C8;   
+            font-size: 20px;
+            &::placeholder{
+                    color: white;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20px;
+                    text-shadow: 0 0 2px #C8C8C8;
+            }
+            &:focus{
+                outline: none; 
+                border-bottom: 1px solid #FF2B51;
+            }
+        }
+    }
+    .textareaContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    p{
+        color: #FF2B51;
+                text-shadow: 0 0 2px red;
+        height: 13px;
+        margin-left: 20px;
+        display: inline;  
+    }
+    textarea{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.144);
+        border: none;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        height: 210px;
+        text-align: left;
+        padding: 10px;
+        margin: 10px;
+        resize: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 0 0 2px #C8C8C8;
+        &::placeholder{
+                font-size: 20px;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                text-shadow: 0 0 2px #C8C8C8;
+        }
+        &:focus{
+           outline: none; 
+        }
+    }
+    button{
+        cursor: pointer;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.329);
+        text-align: center;
+        margin-top: 33px;
+        border-radius: 20px;
+        padding: 20px;
+        padding-bottom: 20px;
+        transition: 0.5s ease;
+        &:hover{
+            background-color: white;
+        }
+    }
+    .contenedorLoading{
+        display: flex;
+        justify-content: center;
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #FFF;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+    }
+        @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    } 
+}
+

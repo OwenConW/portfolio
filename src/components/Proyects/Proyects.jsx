@@ -30,6 +30,14 @@ import searchW from "./assets/searchW.png"
 import formW from "./assets/formW.png"
 import aboutW from "./assets/aboutW.png"
 import noPokemonW from "./assets/noPokemonW.png"
+import errorW from "./assets/errorW.png"
+//-
+import nocities from "./assets/nocities.png"
+import citiesDay from "./assets/citiesDay.png"
+import citiesNight from "./assets/citiesNight.png"
+import detailClima from "./assets/detailClima.png"
+import aboutClima from "./assets/aboutClima.png"
+import errorC from "./assets/error.png"
 
 export default function Proyects() {
   const cardVariants = {
@@ -50,6 +58,12 @@ export default function Proyects() {
   };
   const dispatch = useDispatch();
 
+  let imagenesJobHub = [login, createAccount, home, catalogo, mapa, details, chat, admin, faq, panelConfig, profileP, soporte]
+
+  let imagenesWiki = [landingW, homeW, searchW, formW, aboutW, noPokemonW, errorW]
+
+  let imagenesAppClima = [nocities, citiesDay, citiesNight, detailClima, aboutClima, errorC]
+
   React.useEffect(() => {
     functions.setPagerLocalStorage(window.location.pathname.substring(1));
     dispatch(changeSelectedWindow(window.location.pathname.substring(1)));
@@ -59,21 +73,13 @@ export default function Proyects() {
     <>
       <div className={s.contenedorPadre}>
         <div className={s.contenedorTitle}>
-          <div>
-          <motion.b
-             initial={{ x: -4000, opacity: 0 }}
-             animate={{ x: 0, opacity: 1 }}
-             transition={{ delay: 0.5 }}
-          >{`>`}</motion.b>
-          <motion.h1
-              initial={{ x: -4000, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.5 }}
-            className={s.title}
-          >
-            Galeria de proyectos
-          </motion.h1>
-          </div>
+          <motion.div
+          initial={{ opacity: 0, x: -1000 }}
+          animate={{opacity: 1, x: 0,}}
+          transition={{type: "spring",  delay: 0.5 }}>
+          <motion.b>{`>`}</motion.b>
+          <motion.h1 className={s.title}>Galeria de proyectos </motion.h1>
+          </motion.div>
           <motion.div
           animate={{ y: [-170, 0], x: [0, 0], opacity: [0, 1]}}
           transition={{delay: 1}}>
@@ -99,54 +105,22 @@ export default function Proyects() {
                 <div className="carousel-item active">
                 <div className={s.ImagenesProyecto}>
                   <h1 id="firstJ" className={s.tituloProyecto}>Job Hub App</h1>
-                  <motion.img src={login} alt="login" className={s.itemCarousel}
-                  variants={cardVariants}
-                  initial="offscreenR"
-                  whileInView="onscreen"/>
-                  <motion.img src={createAccount} alt="createAccount" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                  <motion.img src={home} alt="home" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                  <motion.img src={catalogo} alt="catalogo" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                  <motion.img src={mapa} alt="mapa" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                  <motion.img src={details} alt="details" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                  <motion.img src={chat} alt="chat" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                  <motion.img src={admin} alt="admin" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                  <motion.img src={faq} alt="faq" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                  <motion.img src={panelConfig} alt="panelConfig" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                  <motion.img src={profileP} alt="profileP" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                  <motion.img src={soporte} alt="soporte" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
+                  {
+                    imagenesJobHub?.map((l, i) => {
+                      return (
+                        i % 2 === 0 ? 
+                        <motion.img src={`${l}`} alt={`${l}`} className={s.itemCarousel}
+                        variants={cardVariants}
+                        initial="offscreenR"
+                        whileInView="onscreen"/>
+                        :
+                        <motion.img src={`${l}`} alt={`${l}`} className={s.itemCarousel}
+                        variants={cardVariants}
+                        initial="offscreenL"
+                        whileInView="onscreen"/>
+                      )
+                    })
+                  }
                   <h1><img src={gitHub} alt="github"/><a href="https://github.com/OwenConW/JobHubApp">Repositorio</a></h1>
                   <h1><img src={deploy} alt="deploy"/><a href="https://jobhub.vercel.app/">Deploy</a></h1>
                   <h1 className={s.comeBack}><a href="#firstJ">Regresar</a><img src={click} alt="clickback"/></h1>
@@ -155,30 +129,22 @@ export default function Proyects() {
                 <div className="carousel-item">
                 <div className={s.ImagenesProyecto}>
                 <h1 id="firstW" className={s.tituloProyecto}>Wiki Pokemon</h1>
-                <motion.img src={landingW} alt="landingW" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                <motion.img src={homeW} alt="homeW" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                <motion.img src={searchW} alt="searchW" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                <motion.img src={formW} alt="formW" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
-                <motion.img src={aboutW} alt="aboutW" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
-                <motion.img src={noPokemonW} alt="noPokemonW" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenL"
-                whileInView="onscreen"/>
+                {
+                    imagenesWiki?.map((l, i) => {
+                      return (
+                        i % 2 === 0 ? 
+                        <motion.img src={`${l}`} alt={`${l}`} className={s.itemCarousel}
+                        variants={cardVariants}
+                        initial="offscreenR"
+                        whileInView="onscreen"/>
+                        :
+                        <motion.img src={`${l}`} alt={`${l}`} className={s.itemCarousel}
+                        variants={cardVariants}
+                        initial="offscreenL"
+                        whileInView="onscreen"/>
+                      )
+                    })
+                  }
                 <h1><img src={gitHub} alt="github"/><a href="https://github.com/OwenConW/WikiPokemon">Repositorio</a></h1>
                 <h1><img src={deploy} alt="deploy"/><a href="https://pokemon-wikit-by-owen.vercel.app/">Deploy</a></h1>
                   <h1 className={s.comeBack}><a href="#firstW">Regresar</a><img src={click} alt="clickback"/></h1>
@@ -187,10 +153,22 @@ export default function Proyects() {
                 <div className="carousel-item">
                 <div className={s.ImagenesProyecto}>
                 <h1 id="firstC" className={s.tituloProyecto}>App Clima </h1>
-                <motion.img src={soporte} alt="soporte" className={s.itemCarousel}
-                variants={cardVariants}
-                initial="offscreenR"
-                whileInView="onscreen"/>
+                {
+                    imagenesAppClima?.map((l, i) => {
+                      return (
+                        i % 2 === 0 ? 
+                        <motion.img src={`${l}`} alt={`${l}`} className={s.itemCarousel}
+                        variants={cardVariants}
+                        initial="offscreenR"
+                        whileInView="onscreen"/>
+                        :
+                        <motion.img src={`${l}`} alt={`${l}`} className={s.itemCarousel}
+                        variants={cardVariants}
+                        initial="offscreenL"
+                        whileInView="onscreen"/>
+                      )
+                    })
+                  }
                 <h1><img src={gitHub} alt="github"/><a href="https://github.com/OwenConW/App_clima">Repositorio</a></h1>
                 <h1><img src={deploy} alt="deploy"/><a href="https://app-clima-lime.vercel.app/">Deploy</a></h1>
                   <h1 className={s.comeBack}><a href="#firstC">Regresar</a><img src={click} alt="clickback"/></h1>
@@ -232,16 +210,3 @@ export default function Proyects() {
     </>
   );
 }
-          {/*        
-            <div>
-                <h1>Job Hub App</h1>
-                <img src={login} alt="login"/>
-            </div>
-            <div>
-                <h1>Wiki Pokemon</h1>Name
-           <img src={home} alt="login"/>
-            </div>
-            <div>
-                <h1>App Clima</h1>
-                <img src={mapa} alt="login"/>
-            </div> */}

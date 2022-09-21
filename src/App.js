@@ -4,6 +4,7 @@ import { Route, Routes} from "react-router-dom"
 import Technologies from "./components/Technologies/Technologies"
 import Proyects from "./components/Proyects/Proyects"
 import Contactme from "./components/Contactme/Contactme"
+import "./App.css"
 
 function App() {
   return (

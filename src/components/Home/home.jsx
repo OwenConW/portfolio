@@ -9,6 +9,7 @@ import * as functions from "../../handlers/localSorage"
 import { useDispatch } from "react-redux"
 import { changeSelectedWindow} from "../../redux/actions/actions"
 
+
 const Home = () => {
 
     const dispatch = useDispatch()
@@ -33,7 +34,7 @@ const Home = () => {
               className={s.title}
             >
               Bienvenid<b className={s.o}>@</b> al portfolio de{" "}
-              <b className={s.o}>O</b>wen.....
+              <b className={s.o}>O</b>wen
             </motion.h1>
             <motion.div
               className={s.MyName}
@@ -51,27 +52,21 @@ const Home = () => {
         </div>
         <div className={s.contenedorImageNav}>
           <div className={s.about}>
-            {window.visualViewport.width <= 688 ? (
               <>
-                <b className={s.b1}><b className={s.inicio}>{`>`}</b> Mi nombre es Owen, soy{" "}</b>
-                <b className={s.b2}> Desarrollador Web Full Stack, </b>
-                <b className={s.b3}>me motiva aprender nuevas</b>
-                <b className={s.b4}>tecnologias, así como a su vez </b>
-                <b className={s.b5}> mejorar en esta area cada día</b>
-                <b className={s.b6}> y continuar aprendiendo Ingles.</b>
-                <b className={s.b7}> Team Front y Back por igual ;)</b>
+                <b className={s.b1}><b className={s.inicio}>{`>`}</b> Mi nombre es Owen, soy Desarrollador</b>
+                <b className={s.b2}>Web Full Stack. Me motiva aprender nuevas </b>
+                <b className={s.b3}>tecnologias, trabajar en  equipos donde la</b>
+                <b className={s.b4}> diversidad de opiniones y puntos de vista </b>
+                <b className={s.b5}> aportan al desarrollo grupal, mejorar en esta </b>
+                <b className={s.b6}> area cada día y continuar aprendiendo Ingles.</b>
+                <b className={s.b7}> Team Front y Back por igual ;)</b> 
               </>
-            ) : (
-              <>
-                <b className={s.b1}><b className={s.inicio}>{`>`}</b> Mi nombre es Owen, soy{" "}</b>
-                <b className={s.b2}> Desarrollador Web Full Stack, </b>
-                <b className={s.b3}>me motiva aprender nuevas</b>
-                <b className={s.b4}>tecnologias, así como a su vez </b>
-                <b className={s.b5}> mejorar en esta area cada día</b>
-                <b className={s.b6}> y continuar aprendiendo Ingles.</b>
-                <b className={s.b7}> Team Front y Back por igual ;)</b>
-              </>
-            )}
+              <motion.div
+                 animate={{ y: [200, 0], x: [0, 0], opacity: [0, 1] }}
+                 transition={{delay: 0.5}}
+                 className={s.downloadCV}>
+                <a download="CV-BonorisOwen" href="OwenBonoris-CV-Full_Stack_Developer.pdf" className={s.downloadCVButton}>Descargar CV </a>
+              </motion.div>
           </div>
           <motion.div
             className={s.visual}

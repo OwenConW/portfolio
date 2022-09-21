@@ -23,8 +23,7 @@
             width: 100%;
             margin-left: 20px;
             margin-bottom: 0px;
-            text-shadow: 0 0 8px #C8C8C8;
-
+            text-shadow: 0 0 7px #C8C8C8;
             .o{
                 font-family: 'Poppins', sans-serif;
                 color: #FF2B51;
@@ -47,6 +46,7 @@
                 color: white;
                 font-family: 'Poppins', sans-serif;
                 font-size: 120px;
+
             }
             .MyName{
                 display: flex;
@@ -74,7 +74,7 @@
         height: 70%;
         width: 100%;
         .about{
-            margin-top: 120px;
+            margin-top: 60px;
             display: flex;
             flex-direction: column;
             width: 50%;
@@ -87,7 +87,7 @@
                 margin-left: 25px;
                 font-family: 'Poppins', sans-serif;
                 font-weight: 200;
-                font-size: 50px;
+                font-size: 40px;
                 text-shadow: 0 0 2px #C8C8C8;
             }
             .b1{
@@ -166,6 +166,39 @@
                 animation-fill-mode: forwards;
                 transition-timing-function: linear;
             }
+          
+                .downloadCV{
+                    color: #FF2B51;
+                    text-shadow: 0 0 5px #ff0505;
+                    width: 100%;
+                    font-size: 50px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                    .downloadCVButton{
+                        margin-left: 10px;
+                        text-align: center;
+                        box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        -webkit-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        -moz-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        font-size: 45px;
+                        color: white;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        border-radius: 15px;
+                        background-color: #e40037;
+                        width: 50%;
+                        height: 100%;
+                        cursor: pointer;
+                        transition: 0.5s ease;
+                        &:hover{
+                            transform: scale(1.05);
+                            text-decoration: none;
+                            background-color: #85172b;
+                        }
+                    }
+                }
+            
         }
         .visual{
             display: flex;
@@ -285,7 +318,7 @@
             height: 70%;
             width: 100%;
             .about{
-                margin-top: 120px;
+                margin-top: 90px;
                 display: flex;
                 flex-direction: column;
                 width: 60%;
@@ -298,93 +331,124 @@
                     margin-left: 25px;
                     font-family: 'Poppins', sans-serif;
                     font-weight: 200;
-                    font-size: 33px;
+                    font-size: 24px;
                     text-shadow: 0 0 2px #C8C8C8;
                 }
+                .b1{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 0s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                    .inicio{
+                        color: #FF2B51;
+                        text-shadow: none;
+                    }
                 }
-            .b1{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 0s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-                .inicio{
-                    color: #FF2B51;
-                    text-shadow: none;
+                
+                .b2{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 1s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
                 }
-            }
-            
-            .b2{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 1s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            
-            .b3{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 2s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            
-            .b4{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 3s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            
-            .b5{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 4s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            .b6{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 5s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-                .inicio{
-                    color: #ffffff;
-                    text-shadow: 0 0 5px #C8C8C8;
-                    margin-left: 0px;
+                
+                .b3{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 2s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
                 }
-            }
-            .b7{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 6s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            .visual{
+                
+                .b4{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 3s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                
+                .b5{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 4s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                .b6{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 5s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                    .inicio{
+                        color: #ffffff;
+                        text-shadow: 0 0 5px #C8C8C8;
+                        margin-left: 0px;
+                    }
+                }
+                .b7{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 6s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                .downloadCV{
+                color: #FF2B51;
+                text-shadow: 0 0 5px #ff0505;
+                width: 100%;
+                font-size: 30px;
                 display: flex;
-                width: 60%;
                 justify-content: center;
-                position: relative;
-                align-items: center;
-                .sombraCirculo{
+                margin-top: 40px;
+                .downloadCVButton{
+                    margin-left: 10px;
+                    text-align: center;
+                    box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                    -webkit-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                    -moz-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                    font-size: 30px;
+                    color: white;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    border-radius: 15px;
+                    width: 50%;
+                    height: 100%;
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    &:hover{
+                        transform: scale(1.05);
+                        text-decoration: none;
+                        background-color: #85172b;
+                    }
+                }
+            }
+            
+            }
+                .visual{
+                    display: flex;
+                    width: 60%;
+                    justify-content: center;
+                    position: relative;
+                    align-items: center;
+                    .sombraCirculo{
                     width: 400px;
                     height: 400px;
                 }
@@ -436,8 +500,9 @@
         align-items: center;
         .contenedorHeader{
             margin-top: 0px;
+            padding-top: 0px;
             width: 100%;
-            height: 25%;
+            height: 15%;
             margin-left: 0px;
             margin-bottom: 0px;
             .contenedorTitle{
@@ -469,13 +534,13 @@
                     margin-top: 0px;
                     color: white;
                     font-family: 'Poppins', sans-serif;
-                    font-size: 50px;
+                    font-size: 44px;
                 }
                 .MyName{
                     display: flex;
                     justify-content: flex-end;
                     width: 25%;
-                    font-size: 20px;
+                    font-size: 26px;
                     margin-right: 54px;
                     text-align: center;
                     text-shadow: none;
@@ -484,9 +549,9 @@
                         height: 100%;
                         width: 100%;
                         img{
-                            width: 160px;
-                            height: 160px;
-                            margin-top: 50px;
+                            width: 100px;
+                            height: 100px;
+                            
                         }
                     }
                 }
@@ -495,7 +560,7 @@
         .contenedorImageNav{
             display: flex;
             flex-direction: column;
-            height: 70%;
+            height: 85%;
             width: 100%;
             .about{
                 margin-top: 0px;
@@ -513,7 +578,7 @@
                     margin-left: 25px;
                     font-family: 'Poppins', sans-serif;
                     font-weight: 200;
-                    font-size: 33px;
+                    font-size: 25px;
                     text-shadow: 0 0 2px #C8C8C8;
                 }
                 .b1{
@@ -586,6 +651,36 @@
                     animation-iteration-count: inherit;
                     animation-fill-mode: forwards;
                 }
+                .downloadCV{
+                    color: #FF2B51;
+                    text-shadow: 0 0 5px #ff0505;
+                    width: 100%;
+                    font-size: 25px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                    .downloadCVButton{
+                        margin-left: 10px;
+                        text-align: center;
+                        box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        -webkit-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        -moz-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        font-size: 25px;
+                        color: white;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        border-radius: 15px;
+                        width: 30%;
+                        height: 100%;
+                        cursor: pointer;
+                        transition: 0.5s ease;
+                        &:hover{
+                            transform: scale(1.05);
+                            text-decoration: none;
+                            background-color: #85172b;
+                        }
+                    }
+                }
             }
             .visual{
                 display: flex;
@@ -646,9 +741,9 @@
         .contenedorHeader{
             margin-top: 0px;
             width: 100%;
-            height: 19%;
             margin-left: 0px;
             margin-bottom: 0px;
+            
             .contenedorTitle{
                 display: flex;
                 justify-content: flex-end;
@@ -688,16 +783,16 @@
         .contenedorImageNav{
             display: flex;
             flex-direction: column;
-            height: 70%;
+            height: 100%;
             width: 100%;
             .about{
-                margin-top: 0px;
+                margin-top: 20px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 text-align: center;
                 width: 100%;
-                height: 100%;
+                height: 36%;
                 b{
                     width: 100%;
                     color: white;
@@ -706,106 +801,136 @@
                     margin-left: 5px;
                     font-family: 'Poppins', sans-serif;
                     font-weight: 200;
-                    font-size: 23px;
+                    font-size: 15px;
                     text-shadow: 0 0 2px #C8C8C8;
                 }
+                .b1{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 0s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                    .inicio{
+                        color: #FF2B51;
+                        text-shadow: none;
+                    }
                 }
-            .b1{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 0s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-                .inicio{
+                
+                .b2{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 1s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                
+                .b3{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 2s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                
+                .b4{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 3s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                
+                .b5{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 4s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                .b6{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 5s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                    .inicio{
+                        color: #ffffff;
+                        text-shadow: 0 0 5px #C8C8C8;
+                        margin-left: 0px;
+                    }
+                }
+                .b7{
+                    width: 0%;
+                    animation-name: typing;
+                    animation-delay: 6s;
+                    animation-duration: 2s;
+                    animation-iteration-count: inherit;
+                    animation-fill-mode: forwards;
+                    transition-timing-function: linear;
+                }
+                .downloadCV{
                     color: #FF2B51;
-                    text-shadow: none;
+                    text-shadow: 0 0 5px #ff0505;
+                    width: 100%;
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                    .downloadCVButton{
+                        margin-left: 10px;
+                        text-align: center;
+                        box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        -webkit-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        -moz-box-shadow: 1px 1px 22px 0px rgba(255,5,5,0.35);
+                        font-size: 15px;
+                        color: white;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 900;
+                        border-radius: 15px;
+                        width: 30%;
+                        height: 100%;
+                        cursor: pointer;
+                        transition: 0.5s ease;
+                        &:hover{
+                            transform: scale(1.05);
+                            text-decoration: none;
+                            background-color: #85172b;
+                        }
+                    }
                 }
             }
-            
-            .b2{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 1s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            
-            .b3{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 2s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            
-            .b4{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 3s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            
-            .b5{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 4s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            .b6{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 5s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-                .inicio{
-                    color: #ffffff;
-                    text-shadow: 0 0 5px #C8C8C8;
-                    margin-left: 0px;
-                }
-            }
-            .b7{
-                width: 0%;
-                animation-name: typing;
-                animation-delay: 6s;
-                animation-duration: 2s;
-                animation-iteration-count: inherit;
-                animation-fill-mode: forwards;
-                transition-timing-function: linear;
-            }
-            .visual{
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                position: relative;
-                align-items: center;
-                margin-top: 40px;
-                .Circulo{
-                    align-self: center;
-                    width: 270px;
-                    height: 270px;
-                    border-radius: 60%;
+                .visual{
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    position: relative;
+                    align-items: center;
+                    margin-top: 40px;
+                    .Circulo{
+                        align-self: center;
+                        width: 230px;
+                        height: 230px;
+                        border-radius: 60%;
                     box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
                     -webkit-box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
                     -moz-box-shadow: 0px -1px 36px 9px rgba(255,43,81,1);
                 }
                 .Circulo2{
                     position: absolute;
-                    width: 270px;
-                    height: 270px;
+                    width: 230px;
+                    height: 230px;
                     border-radius: 60%;
                     box-shadow: 0px -1px 46px 9px rgba(255,43,81,1) inset;
                     -webkit-box-shadow: 0px -1px 46px 9px rgba(255,43,81,1) inset;
@@ -813,11 +938,12 @@
                 }
                 .hacker{
                     position: absolute;
-                    width: 210px;
-                    height: 210px;
+                    width: 190px;
+                    height: 190px;
                 }
             }
             .contenedorLista{
+                margin-top: 40px;
                 width: 5%;
             }
         }

@@ -30,6 +30,7 @@ form{
                         text-shadow: 0 0 2px #C8C8C8;
                 }
                 &:focus{
+                    transition: 0.5s ease;
                     outline: none; 
                     border-bottom: 1px solid #FF2B51;
                 }
@@ -68,6 +69,7 @@ form{
                     text-shadow: 0 0 2px #C8C8C8;
             }
             &:focus{
+                transition: 0.5s ease;
                 outline: none; 
                 border-bottom: 1px solid #FF2B51;
             }
@@ -79,7 +81,7 @@ form{
     }
     p{
         color: #FF2B51;
-                text-shadow: 0 0 2px red;
+        text-shadow: 0 0 2px red;
         height: 13px;
         margin-left: 20px;
         display: inline;  
@@ -99,19 +101,25 @@ form{
         font-family: 'Poppins', sans-serif;
         text-shadow: 0 0 2px #C8C8C8;
         &::placeholder{
-                font-size: 20px;
-                color: white;
-                font-family: 'Poppins', sans-serif;
-                text-shadow: 0 0 2px #C8C8C8;
+            font-size: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 0 2px #f6f6f6;
         }
         &:focus{
-           outline: none; 
+            transition: 0.5s ease;
+            outline: none; 
+            border-bottom: 1px solid #FF2B51;
         }
     }
     button{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 0 0 2px #f6f6f6;
         cursor: pointer;
         border: none;
-        background-color: rgba(255, 255, 255, 0.329);
+        background-color: rgba(255, 255, 255, 0.76);
         text-align: center;
         margin-top: 33px;
         border-radius: 20px;

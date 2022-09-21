@@ -9,12 +9,17 @@ import Swal from 'sweetalert2'
 const Form = () => {
 
     const [input, setInput] = useState({
-        from_name: "",
-        from_email: "",
-        email_subject: "",
-        html_message: ""    
+      from_name: "",
+      from_email: "",
+      email_subject: "",
+      html_message: ""    
     })
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({
+      from_name: "",
+      from_email: "",
+      email_subject: "",
+      html_message: "" 
+    });
     const [loading, setLoading] = useState(null)
 
     const handleChange = (e) => {
@@ -22,21 +27,17 @@ const Form = () => {
             ...input,
             [e.target.name]: e.target.value.toLowerCase()
         })
-        setErrors(validateInputs({
-            ...input,
-            [e.target.name]: e.target.value
-        }))
+        validateInputs(e)
     }
-
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoading(true)
-        Object.keys(validateInputs(input)).length 
+        Object.values(errors).some(e => e !== "") 
         ? Swal.fire({
             title: 'Error!',
-            text: 'Porfavor revisa la informacion',
+            text: 'Porfavor revisa la información',
             icon: 'error',
-            confirmButtonText: 'Cool'
+            confirmButtonText: 'Ok :('
         })
         .then(() => {
             setLoading(false)
@@ -62,9 +63,70 @@ const Form = () => {
         });
     }
 
-    React.useEffect(() => {
-        setErrors(validateInputs(input))
-    }, [])
+    function validateInputs(e){
+    
+        if(e.target.name === "from_name"){
+          if(!e.target.value){
+            setErrors({...errors, 
+            [e.target.name]: "Porfavor ingrese su nombre."
+            })
+          }else if(!/^[a-zA-Z ]+$/.test(e.target.value)){
+            setErrors({...errors, 
+              [e.target.name]: "El nombre solo puede tener letras y espacios."
+            })
+          }else{
+            setErrors({
+              ...errors,
+              [e.target.name]: ""
+            })
+          }
+        }
+        if(e.target.name === "from_email"){
+          if(!e.target.value){
+            setErrors({...errors, 
+              [e.target.name]: "Porfavor ingrese un mail."
+              })
+          }else if(!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e.target.value)){
+            setErrors({...errors, 
+              [e.target.name]: "Porfavor ingrese un mail valido."
+            }) 
+          }else{
+            setErrors({
+              ...errors,
+              [e.target.name]: ""
+            })
+          }
+        }
+        if(e.target.name ===  "email_subject"){
+          if(!e.target.value){
+            setErrors({...errors, 
+              [e.target.name]: "Porfavor ingrese un asunto."
+            }) 
+          }else if(!/^[a-zA-Z ]+$/.test(e.target.value)){
+            setErrors({...errors, 
+              [e.target.name]: "El asunto solo puede tener letras y espacios."
+            }) 
+          }else{
+            setErrors({
+              ...errors,
+              [e.target.name]: ""
+            })
+          }
+        }
+        if(e.target.name ===  "html_message"){
+          if(!e.target.value){
+            setErrors({...errors, 
+              [e.target.name]: "Porfavor ingrese un mensaje."
+            })       
+          }else{
+            setErrors({
+              ...errors,
+              [e.target.name]: ""
+            })
+          }
+        }
+
+    }
 
     return (
       <>
@@ -79,9 +141,10 @@ const Form = () => {
                   value={input.from_name}
                   name="from_name"
                   type="text"
-                  placeholder="Nombre..."
+                  placeholder=" * Nombre..."
                   autoComplete="off"
                   onChange={handleChange}
+                  required
                 ></input>
                 {errors ? <p>{errors.from_name}</p> : <p></p>}
               </motion.div>
@@ -93,9 +156,10 @@ const Form = () => {
                   value={input.from_email}
                   name="from_email"
                   type="text"
-                  placeholder="Email..."
+                  placeholder=" * Email..."
                   autoComplete="off"
                   onChange={handleChange}
+                  required
                 ></input>
                 {errors ? <p>{errors.from_email}</p> : <p></p>}
               </motion.div>
@@ -109,9 +173,10 @@ const Form = () => {
                 value={input.email_subject}
                 name="email_subject"
                 type="text"
-                placeholder="Asunto..."
+                placeholder=" * Asunto..."
                 autoComplete="off"
                 onChange={handleChange}
+                required
               ></input>
               {errors ? <p>{errors.email_subject}</p> : <p></p>}
             </motion.div>
@@ -123,9 +188,10 @@ const Form = () => {
               <textarea
                 value={input.html_message}
                 name="html_message"
-                placeholder="Escriba su mensaje..."
+                placeholder=" * Escriba su mensaje..."
                 autoComplete="off"
                 onChange={handleChange}
+                required
               ></textarea>
               {errors ? <p>{errors.html_message}</p> : <p></p>}
             </motion.div>
@@ -136,13 +202,7 @@ const Form = () => {
                     <span className={s.loader}></span>
                 </div>
                 ) : (
-                <motion.button
-                type="submit"
-                animate={{ y: [4000, 0] }}
-                transition={{ delay: 3.6 }}
-              >
-                Enviar
-              </motion.button>
+                <button type="submit">Enviar </button>
               )
             }
            
@@ -153,33 +213,6 @@ const Form = () => {
     );
 }
 
-function validateInputs(input){
-
-    let errors = {};
-    if(!input.from_name){
-        errors.from_name = "Porfavor ingrese su nombre."
-    }else if(!/^[a-zA-Z ]+$/.test(input.from_name)){
-        errors.from_name = "El nombre solo puede tener letras y/o espacios."
-    }
-
-    if(!input.from_email){
-        errors.from_email = "Porfavor ingrese un mail."
-    }else if(!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.from_email)){
-        errors.from_email = "Porfavor ingrese un mail valido."
-    }
-
-    if(!input.email_subject){
-        errors.email_subject = "Porfavor ingrese un asunto."
-    }else if(!/^[a-zA-Z ]+$/.test(input.email_subject)){
-        errors.email_subject = "El asunto solo puede tener letras y/o espacios."
-    }
-
-    if(!input.html_message){
-        errors.html_message = "Porfavor ingrese un mensaje."
-    }
-
-    return errors
-}
 
 
 export default Form

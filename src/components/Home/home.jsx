@@ -11,7 +11,7 @@ import { changeSelectedWindow} from "../../redux/actions/actions"
 
 
 const Home = () => {
-
+  
     const dispatch = useDispatch()
 
     React.useEffect(() => {

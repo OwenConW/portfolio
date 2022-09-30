@@ -13,6 +13,7 @@ import node from "./assets/node-js.png"
 import postgre from "./assets/postgre.png"
 import react from "./assets/react.png"
 import redux from "./assets/redux.png"
+import python from "./assets/python.png"
 import sass from "./assets/sass.png"
 import scrum from "./assets/scrum.png"
 import sql from "./assets/sql.png"
@@ -572,7 +573,22 @@ const Technologies = () => {
                   >
                   <img src={sequelizeIcon} alt="sequelize" />
                   <h1>Sequelize</h1>
-                </motion.div>        
+                </motion.div>   
+                <motion.div className={s.contenedorTechnologie}
+                drag
+                  dragConstraints={{
+                      top: -80,
+                      left: -80,
+                      right: 80,
+                      bottom: 80
+                  }}
+                  initial={{opacity: 0, delay: 1}}
+                  animate={{ y: [2700, 0], opacity: [0, 1]}}
+                  transition={{delay: 1.8}}
+                  >
+                  <img src={python} alt="python" />
+                  <h1>Python</h1>
+                </motion.div>      
                 </div>
               </div>
               <div className={s.Nav}>

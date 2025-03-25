@@ -65,7 +65,7 @@ const Home = () => {
                  animate={{ y: [200, 0], x: [0, 0], opacity: [0, 1] }}
                  transition={{delay: 0.5}}
                  className={s.downloadCV}>
-                <a download="CV-BonorisOwen" href="OwenBonoris-CV-Full_Stack_Developer.pdf" className={s.downloadCVButton}>Descargar CV </a>
+                <a download="CV-Owen" className={s.downloadCVButton}>Descargar CV </a>
               </motion.div>
           </div>
           <motion.div
